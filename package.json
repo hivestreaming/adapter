@@ -1,9 +1,9 @@
 {
-  "name": "webrtc-adapter",
-  "version": "7.2.3",
+  "name": "@hivestreaming/webrtc-adapter",
+  "version": "7.2.3-build.1",
   "description": "A shim to insulate apps from WebRTC spec changes and browser prefix differences",
   "license": "BSD-3-Clause",
-  "main": "./src/js/adapter_core5.js",
+  "main": "./out/adapter.min.js",
   "module": "./src/js/adapter_core.js",
   "repository": {
     "type": "git",
