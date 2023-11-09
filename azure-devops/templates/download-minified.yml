@@ -1,0 +1,9 @@
+parameters:
+  - name: version
+    type: string
+  - name: outDir
+    type: string
+
+steps:
+  - script: wget -P ${{ parameters.outDir }} https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/${{ parameters.version }}/adapter.min.js
+    displayName: 'Download Minified'
