@@ -15,7 +15,9 @@
     "The adapter.js project authors (https://github.com/webrtchacks/adapter/)"
   ],
   "scripts": {
-    "postversion": "export GITTAG=\"echo $(git describe --abbrev=0 --tags | sed 's/^v//')\" && git push --force --set-upstream origin bumpVersion --follow-tags && git checkout gh-pages && git pull && cp out/adapter.js adapter.js && cp adapter.js adapter-`$GITTAG`.js && rm adapter-latest.js && ln -s adapter-`$GITTAG`.js adapter-latest.js && mkdir -p adapter-`$GITTAG`-variants && cp out/adapter.js adapter-`$GITTAG`-variants/ && cp out/adapter_*.js adapter-`$GITTAG`-variants/ && git add adapter.js adapter-latest.js adapter-`$GITTAG`.js adapter-`$GITTAG`-variants && git commit -m `$GITTAG` && git push --set-upstream origin gh-pages && git checkout main",
+    "preversion": "",
+    "version": "",
+    "postversion": "",
     "prepare": "grunt build",
     "prepublishonly": "npm test",
     "test": "grunt && mocha test/unit && karma start test/karma.conf.js",
